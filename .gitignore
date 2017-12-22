@@ -64,6 +64,8 @@ $RECYCLE.BIN/
 .svn/
 *.bin
 *.d
+*.so
+*.so.5
 *.txt
 *.iex
 *.crf

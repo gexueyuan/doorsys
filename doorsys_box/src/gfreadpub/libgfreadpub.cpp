@@ -207,13 +207,19 @@ int gfreadEncIdData(unsigned char *pbRecv, int *punRLen)
 int gfreadDevRead(unsigned char *pbSend, unsigned int unSLen, unsigned char *pbRecv, unsigned int *punRLen)
 {
 	int rc = 0;
-	
-	rc = gfZmqTransmit(g_context, pbSend, unSLen, pbRecv, 3);
-	if(rc > 0)
+	rc = luareader_transmit(g_context, pbSend, unSLen, pbRecv, 4096, 3000);
+	if(rc > 2)
 	{
 		*punRLen = rc;
 		rc = 0;
 	}
+	
+//	rc = gfZmqTransmit(g_context, pbSend, unSLen, pbRecv, 3);
+//	if(rc > 0)
+//	{
+//		*punRLen = rc;
+//		rc = 0;
+//	}
 
 
 	return rc;
@@ -271,6 +277,8 @@ int gfPrepare(char *sn_buf, char *cos_buf)
 
 	return hr;
 }
+
+
 
 int gfDisConnect()
 {

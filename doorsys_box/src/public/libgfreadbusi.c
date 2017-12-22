@@ -32,14 +32,14 @@ typedef struct _busi_config{
 	int find_card_timeout;
 	int read_svr_port;
 	char soft_version[64];  //软件版本
-	//char cos_version[64];   //COS版本
+	char cos_version[64];   //COS版本
 	char read_sn[20];       //读卡器序号
 	char busi_server[64];
 	char cos_server[64];
 	char log_server[64];
 	char read_svr_ip[64];
 	char gopanbox_server[64];  //GBOX
-	//char control_server[64];   //主控
+	char control_server[64];   //主控
 	char idcard_buf[4096];
 	int  idcard_len;
 	char refnum_buf[100];
@@ -67,17 +67,17 @@ static void load_busi_cfg(){
 	memset(&g_busi_config, 0, sizeof(g_busi_config));
 	strcpy(g_busi_config.log_server, "tcp://");
 	strcpy(g_busi_config.busi_server, "tcp://");
-	//strcpy(g_busi_config.cos_server, "tcp://");
+	strcpy(g_busi_config.cos_server, "tcp://");
 	strcpy(g_busi_config.gopanbox_server, "tcp://");
-	//strcpy(g_busi_config.control_server, "tcp://");
+	strcpy(g_busi_config.control_server, "tcp://");
 	g_busi_config.tcp_timeout  = conf_getint("GFREAD_INFO", "tcp_timeout", scfg_file);
 	g_busi_config.log_level  = conf_getint("GFREAD_INFO", "iLogLevel", scfg_file);
 	conf_getstring("GFREAD_INFO", "sLogServer", g_busi_config.log_server+6, sizeof(g_busi_config.log_server)-6, scfg_file);
 	conf_getstring("GFREAD_INFO", "sBusiServer", g_busi_config.busi_server+6, sizeof(g_busi_config.busi_server)-6, scfg_file);
-	//conf_getstring("GFREAD_INFO", "sCosServer", g_busi_config.cos_server+6, sizeof(g_busi_config.cos_server)-6, scfg_file);
+	conf_getstring("GFREAD_INFO", "sCosServer", g_busi_config.cos_server+6, sizeof(g_busi_config.cos_server)-6, scfg_file);
 	
 	conf_getstring("GFREAD_INFO", "sGopanboxServer", g_busi_config.gopanbox_server+6, sizeof(g_busi_config.gopanbox_server)-6, scfg_file);
-	//conf_getstring("GFREAD_INFO", "sControlServer", g_busi_config.control_server+6, sizeof(g_busi_config.control_server)-6, scfg_file);
+	conf_getstring("GFREAD_INFO", "sControlServer", g_busi_config.control_server+6, sizeof(g_busi_config.control_server)-6, scfg_file);
 
 	conf_getstring("GFREAD_INFO", "read_svr_ip", g_busi_config.read_svr_ip, sizeof(g_busi_config.read_svr_ip)-1, scfg_file);
 	g_busi_config.read_svr_port = conf_getint("GFREAD_INFO", "read_svr_port", scfg_file);
@@ -90,7 +90,7 @@ int gfread_busi_comm()
 	void *context;
 	void* request;
 	void* gopanbox_del;
-	//void* control_del;
+	void* control_del;
 	char recv_buf[MAX_BUF_LEN];
 	int  recv_len = 0;
 	char send_buf[MAX_BUF_LEN];
@@ -101,6 +101,7 @@ int gfread_busi_comm()
 	unsigned short tran_code = 0;
 
 	signal(SIGUSR1,busi_sig);
+	chdir("/");
 	
 	load_busi_cfg();
 	LOG_OPEN(g_busi_config.log_server, LOGTAG_BUSI, g_busi_config.log_level);
@@ -110,7 +111,7 @@ int gfread_busi_comm()
 	request = zmq_socket_new_dealer_svr(context, g_busi_config.busi_server);
 	
 	gopanbox_del = zmq_socket_new_dealer(context, g_busi_config.gopanbox_server);
-	//control_del = zmq_socket_new_dealer(context, g_busi_config.control_server);
+	control_del = zmq_socket_new_dealer(context, g_busi_config.control_server);
 	
 	zmq_pollitem_t pollitems[1];
 	
@@ -176,6 +177,7 @@ int gfread_busi_comm()
 		//设置为空闲等待
 		if(timeout == -1)
 		{
+LOG_PRINT(L_DBG,"timeout:%d", timeout);
 			cjson_update_value(GPBOX_STAT_JSON_FILE, READSTATUS, READSTAT_1);
 		}
 		rc = zmq_poll(pollitems, 1, timeout);  
@@ -347,14 +349,14 @@ static int busi_read_id(unsigned short tran_code, char *rsp_buf, int *rsp_len)
 		return -1;
 	}
 	
-	//寻到卡后点灯-读卡过程中
-	rc = gfLedFindCardIng();
-	if(rc < 0)
-	{
-		LOG_PRINT(L_ERR, "busi_read_id gfLedFindCardIng error.rc:[%d]", rc);
-		busi_packet(tran_code, LOG_ERR_LED, rsp_buf, rsp_len);
-		return -1;
-	}
+//	//寻到卡后点灯-读卡过程中
+//	rc = gfLedFindCardIng();
+//	if(rc < 0)
+//	{
+//		LOG_PRINT(L_ERR, "busi_read_id gfLedFindCardIng error.rc:[%d]", rc);
+//		busi_packet(tran_code, LOG_ERR_LED, rsp_buf, rsp_len);
+//		return -1;
+//	}
 	
 	if(tran_code == READ_INFO_OFFLINE)   //脱机读证
 	{ 
@@ -362,8 +364,6 @@ static int busi_read_id(unsigned short tran_code, char *rsp_buf, int *rsp_len)
 		if(rc != 0)
 		{
 			LOG_PRINT(L_ERR, "gfOffLineReadInfo error.rc:[%d]", rc);
-			//点灯-认证失败
-			gfLedReadIdFail();
 			
 			//设置为读卡失败
 			cjson_update_value(GPBOX_STAT_JSON_FILE, READSTATUS, READSTAT_3); 
@@ -373,8 +373,7 @@ static int busi_read_id(unsigned short tran_code, char *rsp_buf, int *rsp_len)
 			return -1;
 		}	
 		
-		//点灯-认证成功
-		gfLedReadIdSuc();
+
 		
 		//设置为读卡成功
 		cjson_update_value(GPBOX_STAT_JSON_FILE, READSTATUS, READSTAT_2); 
@@ -394,8 +393,7 @@ static int busi_read_id(unsigned short tran_code, char *rsp_buf, int *rsp_len)
 		if(rc != 0)
 		{
 			LOG_PRINT(L_ERR, "busi_read_id gfreadIDInfo error.rc:[%08X]", rc);
-			//点灯-认证失败
-			gfLedReadIdFail();
+
 			
 			//发送错误日志给日志服务
 			busi_send_log(rc);
@@ -412,10 +410,7 @@ static int busi_read_id(unsigned short tran_code, char *rsp_buf, int *rsp_len)
 		LOG_HEX(L_DBG, g_busi_config.idcard_buf, g_busi_config.idcard_len, "idcard:[%d]", g_busi_config.idcard_len);
 		LOG_PRINT(L_DBG, "refnum:[%s]", g_busi_config.refnum_buf);
 		LOG_HEX(L_DBG, g_busi_config.time_buf, g_busi_config.time_len, "timebuf:[%d]", g_busi_config.time_len);
-		
-		//点灯-认证成功
-		gfLedReadIdSuc();
-	
+			
 		//发送时间链给日志服务
 		busi_send_log(0);
 		
@@ -462,14 +457,7 @@ static int busi_parse_packet(char *recv_buf, int recv_len, char *send_buf, int *
 		case 	READ_INFO_ONLINE:  //认证模式-在线和离线
 		case  READ_INFO_OFFLINE:
 			LOG_PRINT(L_DBG, "busi_parse_packet begin...");
-			//收到读证请求后，点亮LED灯，提示“将身份证放入读卡区域”
-			rc = gfLedBegin();
-			if(rc < 0)
-			{
-				LOG_PRINT(L_ERR, "busi_read_id gfLedBegin error.rc:[%d]", rc);
-				busi_packet(0x0010, 0x0001, send_buf, send_len);
-				break;
-			}
+
 			//寻卡和读证
 			rc = busi_read_id(tran_code, send_buf, send_len);
 			if(rc == 0xE0E06FF0) //寻卡返回6FF0

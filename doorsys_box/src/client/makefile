@@ -1,7 +1,7 @@
 NETCARD_HOME=/home/openwrt/pc02/openwrt/liuyuyi/doorsys/doorsys_box
 CROSS=mips-openwrt-linux-
 #INC=-I$(NETCARD_HOME)/include -I/usr/local/include
-INC=-I$(NETCARD_HOME)/include -I/home/openwrt/pc02/openwrt/build_dir/target-mips_34kc_uClibc-0.9.33.2/OpenWrt-SDK-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-i686/staging_dir/target-mips_34kc_uClibc-0.9.33.2/usr/include
+INC=-I$(NETCARD_HOME)/include -I/usr/local/include -I/home/openwrt/pc02/openwrt/build_dir/target-mips_34kc_uClibc-0.9.33.2/OpenWrt-SDK-ar71xx-generic_gcc-4.8-linaro_uClibc-0.9.33.2.Linux-i686/staging_dir/target-mips_34kc_uClibc-0.9.33.2/usr/include
 CFLAGS= -c -g -DLINUX
 LIB=$(NETCARD_HOME)/lib
 LIBFLAG=-L$(LIB)

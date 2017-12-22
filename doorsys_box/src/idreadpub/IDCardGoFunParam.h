@@ -46,7 +46,10 @@ namespace IDCARD {
 		{
 			HRESULT hr = AKEY_RV_OK;
 			CBuffer resultBuf;
-			hr = Reader_Execute((LPBYTE)IDCARD_SELECT_GOFUN_AID,16,resultBuf);
+			//gofun
+			hr = Reader_Execute((LPBYTE)IDCARD_SELECT_IDCARD_AID,16,resultBuf);
+			//doorsys
+			//hr = Reader_Execute((LPBYTE)IDCARD_SELECT_GOFUN_AID,16,resultBuf);
 			return hr;
 		}
         

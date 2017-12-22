@@ -229,6 +229,7 @@ int gflog_server(){
 	log_svr_info *p_log_svr_info;
 	
 	signal(SIGUSR1,gflog_sig);
+	chdir("/");
 	
 	load_log_cfg();
 	LOG_OPEN(g_log_svr.log_server, LOGTAG_GFLOG, g_log_svr.log_level);

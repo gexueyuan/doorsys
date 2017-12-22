@@ -5,6 +5,7 @@
 #include "global_sys.h"
 #include "libzmqtools.h"
 #include "libgfreadpub.h"
+#include "luareader.h"
 
 static int print_hex(LPBYTE buf, UINT32 unSLen)
 {
@@ -20,23 +21,23 @@ static int print_hex(LPBYTE buf, UINT32 unSLen)
 	return 0;
 }
 
-int gfZmqTransmit(void *context, unsigned char *send_buf, int send_len, unsigned char *recv_buf, int time_out)
-{
-	int rc = 0;
+//int gfZmqTransmit(void *context, unsigned char *send_buf, int send_len, unsigned char *recv_buf, int time_out)
+//{
+//	int rc = 0;
 	
 	//∑¢ÀÕ
-	zmq_send(context, send_buf, send_len, 0);
+//	zmq_send(context, send_buf, send_len, 0);
 	
 	//Ω” ’
-	rc = zmq_poll_recv(context, (char *)recv_buf, 8192, time_out);
-	if(rc < 0)
-	{
-		printf("gfZmqTransmit:zmq_poll_recv err.rc:[%d]\n", rc);
-		return -1;
-	}
+//	rc = zmq_poll_recv(context, (char *)recv_buf, 8192, time_out);
+//	if(rc < 0)
+//	{
+//		printf("gfZmqTransmit:zmq_poll_recv err.rc:[%d]\n", rc);
+//		return -1;
+//	}
 
-	return rc;
-}
+//	return rc;
+//}
 
 
 namespace AKey
@@ -53,7 +54,8 @@ namespace AKey
 		{
 			HRESULT hr = 0;
 
-			hr = gfZmqTransmit(m_handle, pbSend, unSLen, pbRecv, 3);
+			hr = luareader_transmit(m_handle, pbSend, unSLen, pbRecv, 10240, 3000);		
+		//	hr = gfZmqTransmit(m_handle, pbSend, unSLen, pbRecv, 3);
 			if(hr > 0)
 			{
 				*punRLen = hr;
