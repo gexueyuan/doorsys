@@ -1,0 +1,14 @@
+{
+	"header":{
+		"Locale":"ZH_cn"
+	},
+	"params":{
+		"gopanver": "1.0.0.0",
+		"goreadver": "1.0.0.0",
+		"tboxver": "1.0.0.0",
+		"gopansn": "0001",
+		"goreadsn": "0002",
+		"tboxsn": "0003",
+		"netsn": "0004"
+	}
+}

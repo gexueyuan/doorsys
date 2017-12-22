@@ -1,0 +1,12 @@
+####################################################################!
+#! /bin/sh
+## Version: V1
+## Date:    2012-10-09
+## Author:  YangLiqiang 
+####################################################################!
+pids=`ps |grep $1|grep -v grep|grep -v killbyname|awk '{print $1}'`
+if [ -n "${pids}" ]; then
+        kill -SIGUSR1 ${pids}
+fi
+
+exit 0

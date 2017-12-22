@@ -1,0 +1,5 @@
+#!/bin/sh
+echo "Begin to start gfreadsvr process..."
+
+gfreadsvr &
+ps |grep gfreadsvr|grep -v grep

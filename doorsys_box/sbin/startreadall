@@ -1,0 +1,7 @@
+#!/bin/sh
+echo "Begin to start gf-all process..."
+
+gflogsvr &
+gfreadsvr &
+gfcosupdsvr &
+ps |grep gf|grep -v grep

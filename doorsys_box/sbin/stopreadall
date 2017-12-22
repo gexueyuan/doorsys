@@ -1,0 +1,8 @@
+#!/bin/sh
+killsiguser gfcosupdsvr
+killsiguser gfreadsvr
+killsiguser gflogsvr
+sleep 1
+killbyname gfcosupdsvr
+killbyname gfreadsvr
+killbyname gflogsvr

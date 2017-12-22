@@ -1,0 +1,551 @@
+vtls/libcurl_la-openssl.lo: vtls/openssl.c ../lib/curl_setup.h \
+ ../lib/curl_config.h ../include/curl/curlbuild.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/types.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/features.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_config.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/cdefs.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/types.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wordsize.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stddef.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/typesizes.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/pthreadtypes.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/endian.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/endian.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/byteswap.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap-common.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sgidefs.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/time.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/select.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/select.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sigset.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/time.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/sysmacros.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stdint.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdint.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wchar.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/inttypes.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/socket.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/uio.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uio.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/socket.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include-fixed/limits.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include-fixed/syslimits.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/limits.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/posix1_lim.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/local_lim.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/linux/limits.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_local_lim.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/posix2_lim.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sockaddr.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/socket.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/sockios.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/ioctl.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm-generic/ioctl.h \
+ ../include/curl/curlrules.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdio.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_stdio.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/wchar.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_mutex.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/pthread.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sched.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sched.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_clk_tck.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/signal.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/setjmp.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_pthread.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stdarg.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/stdio_lim.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/assert.h \
+ ../lib/curl_setup_once.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdlib.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/alloca.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/string.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/ctype.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_touplow.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/errno.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/errno.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/linux/errno.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/errno.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm-generic/errno-base.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/stat.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/stat.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/time.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stdbool.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/unistd.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/posix_opt.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/confname.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/getopt.h \
+ ../lib/urldata.h ../lib/curl_setup.h ../lib/cookie.h \
+ ../include/curl/curl.h ../include/curl/curlver.h \
+ ../include/curl/curlbuild.h ../include/curl/curlrules.h \
+ ../include/curl/easy.h ../include/curl/multi.h ../include/curl/curl.h \
+ ../include/curl/typecheck-gcc.h ../lib/formdata.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/e_os2.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/opensslconf.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/comp.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/crypto.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/stack.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/safestack.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/opensslv.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ossl_typ.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/symhacks.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/bio.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/x509.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/buffer.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/evp.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/objects.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/obj_mac.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/asn1.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/bn.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ec.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ecdsa.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ecdh.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/rsa.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/dsa.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/dh.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/sha.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/x509_vfy.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/lhash.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pkcs7.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pem.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pem2.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/hmac.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/kssl.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl2.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl3.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/tls1.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/dtls1.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pqueue.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl23.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/srtp.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/engine.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/rand.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ui.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/err.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/netinet/in.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/in.h \
+ ../lib/timeval.h ../lib/http_chunks.h ../lib/hostip.h ../lib/hash.h \
+ ../lib/llist.h ../lib/curl_addrinfo.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/netdb.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/netdb.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/arpa/inet.h \
+ ../lib/asyn.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/setjmp.h \
+ ../lib/splay.h ../lib/imap.h ../lib/pingpong.h ../lib/curl_sasl.h \
+ ../lib/pop3.h ../lib/smtp.h ../lib/ftp.h ../lib/file.h ../lib/ssh.h \
+ ../lib/http.h ../lib/rtsp.h ../lib/smb.h ../lib/wildcard.h \
+ ../lib/multihandle.h ../lib/conncache.h ../lib/sendf.h ../lib/formdata.h \
+ ../lib/url.h ../lib/inet_pton.h vtls/openssl.h ../lib/connect.h \
+ ../lib/nonblock.h ../lib/sockaddr.h ../lib/slist.h ../lib/strequal.h \
+ ../lib/select.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/poll.h \
+ /home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/poll.h \
+ vtls/vtls.h vtls/gtls.h vtls/nssg.h vtls/gskit.h vtls/polarssl.h \
+ vtls/axtls.h vtls/cyassl.h vtls/schannel.h vtls/darwinssl.h \
+ vtls/mbedtls.h ../lib/rawstr.h ../lib/hostcheck.h ../lib/curl_printf.h \
+ ../include/curl/mprintf.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/x509v3.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/conf.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/md5.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pkcs12.h \
+ /home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ocsp.h \
+ ../lib/warnless.h ../lib/non-ascii.h ../lib/curl_memory.h \
+ ../lib/memdebug.h
+
+../lib/curl_setup.h:
+
+../lib/curl_config.h:
+
+../include/curl/curlbuild.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/types.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/features.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_config.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/cdefs.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/types.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wordsize.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stddef.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/typesizes.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/pthreadtypes.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/endian.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/endian.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/byteswap.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/byteswap-common.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sgidefs.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/time.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/select.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/select.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sigset.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/time.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/sysmacros.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stdint.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdint.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/wchar.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/inttypes.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/socket.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/uio.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uio.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/socket.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include-fixed/limits.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include-fixed/syslimits.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/limits.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/posix1_lim.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/local_lim.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/linux/limits.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_local_lim.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/posix2_lim.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sockaddr.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/socket.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/sockios.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/ioctl.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm-generic/ioctl.h:
+
+../include/curl/curlrules.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdio.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_stdio.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/wchar.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_mutex.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/pthread.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sched.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/sched.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_clk_tck.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/signal.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/setjmp.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_pthread.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stdarg.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/stdio_lim.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/assert.h:
+
+../lib/curl_setup_once.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/stdlib.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/alloca.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/string.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/ctype.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/uClibc_touplow.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/errno.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/errno.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/linux/errno.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm/errno.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/asm-generic/errno-base.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/stat.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/stat.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/time.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/lib/gcc/mips-openwrt-linux-uclibc/4.8.3/include/stdbool.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/unistd.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/posix_opt.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/confname.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/getopt.h:
+
+../lib/urldata.h:
+
+../lib/curl_setup.h:
+
+../lib/cookie.h:
+
+../include/curl/curl.h:
+
+../include/curl/curlver.h:
+
+../include/curl/curlbuild.h:
+
+../include/curl/curlrules.h:
+
+../include/curl/easy.h:
+
+../include/curl/multi.h:
+
+../include/curl/curl.h:
+
+../include/curl/typecheck-gcc.h:
+
+../lib/formdata.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/e_os2.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/opensslconf.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/comp.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/crypto.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/stack.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/safestack.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/opensslv.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ossl_typ.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/symhacks.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/bio.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/x509.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/buffer.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/evp.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/objects.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/obj_mac.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/asn1.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/bn.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ec.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ecdsa.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ecdh.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/rsa.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/dsa.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/dh.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/sha.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/x509_vfy.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/lhash.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pkcs7.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pem.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pem2.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/hmac.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/kssl.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl2.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl3.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/tls1.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/dtls1.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pqueue.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ssl23.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/srtp.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/engine.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/rand.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ui.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/err.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/netinet/in.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/in.h:
+
+../lib/timeval.h:
+
+../lib/http_chunks.h:
+
+../lib/hostip.h:
+
+../lib/hash.h:
+
+../lib/llist.h:
+
+../lib/curl_addrinfo.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/netdb.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/netdb.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/arpa/inet.h:
+
+../lib/asyn.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/setjmp.h:
+
+../lib/splay.h:
+
+../lib/imap.h:
+
+../lib/pingpong.h:
+
+../lib/curl_sasl.h:
+
+../lib/pop3.h:
+
+../lib/smtp.h:
+
+../lib/ftp.h:
+
+../lib/file.h:
+
+../lib/ssh.h:
+
+../lib/http.h:
+
+../lib/rtsp.h:
+
+../lib/smb.h:
+
+../lib/wildcard.h:
+
+../lib/multihandle.h:
+
+../lib/conncache.h:
+
+../lib/sendf.h:
+
+../lib/formdata.h:
+
+../lib/url.h:
+
+../lib/inet_pton.h:
+
+vtls/openssl.h:
+
+../lib/connect.h:
+
+../lib/nonblock.h:
+
+../lib/sockaddr.h:
+
+../lib/slist.h:
+
+../lib/strequal.h:
+
+../lib/select.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/sys/poll.h:
+
+/home/openwrt/pc02/openwrt/staging_dir/toolchain-mips_34kc_gcc-4.8-linaro_uClibc-0.9.33.2/include/bits/poll.h:
+
+vtls/vtls.h:
+
+vtls/gtls.h:
+
+vtls/nssg.h:
+
+vtls/gskit.h:
+
+vtls/polarssl.h:
+
+vtls/axtls.h:
+
+vtls/cyassl.h:
+
+vtls/schannel.h:
+
+vtls/darwinssl.h:
+
+vtls/mbedtls.h:
+
+../lib/rawstr.h:
+
+../lib/hostcheck.h:
+
+../lib/curl_printf.h:
+
+../include/curl/mprintf.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/x509v3.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/conf.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/md5.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/pkcs12.h:
+
+/home/openwrt/pc02/openwrt/liuyuyi/doorsys/ssl/include/openssl/ocsp.h:
+
+../lib/warnless.h:
+
+../lib/non-ascii.h:
+
+../lib/curl_memory.h:
+
+../lib/memdebug.h:

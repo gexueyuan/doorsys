@@ -1,0 +1,4 @@
+#!/bin/sh
+killsiguser gfreadsvr
+sleep 1
+killbyname gfreadsvr

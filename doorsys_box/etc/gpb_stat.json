@@ -1,0 +1,17 @@
+{
+	"header":{
+		"Locale":"ZH_cn"
+	},
+	"params":{
+		"bindStatus": "1",
+		"workMode": "0",
+		"verifyMode": "0",
+		"reportMode": "1",
+		"sysFault": "0",
+		"cardFault": "0",
+		"netFault": "1",
+		"cardStatus": "0",
+		"netStatus": "0",
+		"readStatus": "1"
+	}
+}
